@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/expert_mobile_navigation"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.teamx.bottomnav.Expert.ui.ui.home.HomeFragment"
+        android:label="fragment_expert_home"
+        tools:layout="@layout/fragment_expert_home" />
+    <fragment
+        android:id="@+id/notificationsFragment2"
+        android:name="com.teamx.bottomnav.Expert.ui.ui.notifications.NotificationsFragment"
+        android:label="fragment_expert_chat"
+        tools:layout="@layout/fragment_expert_chat" />
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.teamx.bottomnav.Expert.ui.ui.dashboard.DashboardFragment"
+        android:label="fragment_expert_dashboard"
+        tools:layout="@layout/fragment_expert_dashboard" />
+</navigation>

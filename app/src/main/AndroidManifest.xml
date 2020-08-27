@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.teamx.bottomnav">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Enter"></activity>
+        <activity android:name=".FindExpert" />
+        <activity
+            android:name=".Expert.ui.ui.ViewExpertProfile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Find" />
+        <activity
+            android:name=".Buyer.ui.Buy"
+            android:label="Order" />
+        <activity
+            android:name=".Buyer.ui.EditBuyerProfile"
+            android:label="Edit Profile" />
+        <activity
+            android:name=".Expert.ui.ui.ExpertProfile"
+            android:label="Edit Profile" />
+        <activity
+            android:name=".Buyer.ui.BuyerProfile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Expert.ui.ui.ExpertMainActivity" />
+        <activity android:name=".Buyer.ui.BuyerMainActivity" />
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ChatActivity"
+            android:label="Chat" />
+        <activity
+            android:name=".CheckCropDisease"
+            android:label="Crop Disease" />
+        <activity
+            android:name=".Sell"
+            android:label="Make Sales" />
+        <activity
+            android:name=".AskExpert"
+            android:label="Ask The Expert" />
+        <activity
+            android:name=".ReportScam"
+            android:label="Report Scam" />
+        <activity
+            android:name=".CropDisease"
+            android:label="Crop Disease" />
+        <activity
+            android:name=".FindBuyer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FarmSalesSummary"
+            android:label="Sales Summary" />
+        <activity
+            android:name=".EditProfile"
+            android:label="Edit Profile" />
+        <activity
+            android:name=".Profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FarmerProduce"
+            android:label="Your Produce" />
+        <activity
+            android:name=".GetStarted"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SignIn"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".SignUp"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+    </application>
+
+</manifest>

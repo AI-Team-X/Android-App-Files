@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardBackgroundColor="@color/nav_bc"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="8dp"
+    tools:context=".Expert.ui.ui.home.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8">
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/chat_farmer"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:contentPadding="8dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="358dp"
+                            android:layout_height="146dp">
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="97dp"
+                                android:layout_height="77dp"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="32dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/expert" />
+
+                            <TextView
+                                android:id="@+id/textView12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="36dp"
+                                android:text="Profile"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/farmer_customers"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:contentPadding="8dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="146dp">
+
+                            <ImageView
+                                android:id="@+id/imageCustomers"
+                                android:layout_width="97dp"
+                                android:layout_height="77dp"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="40dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/farmer" />
+
+                            <TextView
+                                android:id="@+id/textViewCustomers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="40dp"
+                                android:text="Save A Farmer"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                app:layout_constraintStart_toEndOf="@+id/imageCustomers"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="12dp"
+                                android:text="Contact farmers"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                app:layout_constraintStart_toEndOf="@+id/imageCustomers"
+                                app:layout_constraintTop_toBottomOf="@+id/textViewCustomers" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/farmer_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:contentPadding="8dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="146dp">
+
+                            <ImageView
+                                android:id="@+id/imageProfile"
+                                android:layout_width="97dp"
+                                android:layout_height="77dp"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="52dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_baseline_warning_24" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="52dp"
+                                android:text="Report Scam"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                app:layout_constraintStart_toEndOf="@+id/imageProfile"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/expert_icon4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.cardview.widget.CardView>

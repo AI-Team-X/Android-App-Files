@@ -42,7 +42,7 @@ public class EditProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        storageReference = FirebaseStorage.getInstance().getReference("ProfilePictures");
+        storageReference = FirebaseStorage.getInstance().getReference("all_users");
         databaseReference = FirebaseDatabase.getInstance().getReference("all_users");
         fab = findViewById(R.id.floatingActionButton2);
 
@@ -143,7 +143,7 @@ clicklistener();
                             progressDialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Image Uploaded Successfully ", Toast.LENGTH_LONG).show();
                             @SuppressWarnings("VisibleForTests")
-                            FProfile imageUploadInfo = new FProfile(taskSnapshot.getUploadSessionUri().toString());
+                            User imageUploadInfo = new User(taskSnapshot.getUploadSessionUri().toString());
                             String ImageUploadId = databaseReference.push().getKey();
                             databaseReference.child(ImageUploadId).setValue(imageUploadInfo);
                         }
@@ -164,7 +164,7 @@ clicklistener();
                     .setValue(phoneNo.getText().toString());
         }*/
 
-        FProfile fProfile = new FProfile();
+        User fProfile = new User();
         fProfile.setOtherPhoneNumber(otherPhoneNo.getText().toString().trim());
         fProfile.setHomeAddress(HA.getText().toString().trim());
         fProfile.setFarmLocation(FarmLoc.getText().toString().trim());

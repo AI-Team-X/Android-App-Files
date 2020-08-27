@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -17,10 +18,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 public class Profile extends AppCompatActivity {
     FloatingActionButton btn;
-    TextView fullname;
+    TextView fullname,phonenumber, otherpn, sor, cor,soor, email, yof, ha, nin, farmlocation ;
+    ImageView imageView;
 
 
     @Override
@@ -35,13 +38,47 @@ public class Profile extends AppCompatActivity {
                 startActivity(new Intent(Profile.this, EditProfile.class));
             }
         });
+        getAccountDetails();
     }
 
     private void getAccountDetails(){
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.hasChildren()) {
+                    for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+
+                        User user = dataSnapshot.getValue(User.class);
+                        fullname.setText(user.getUser_full_name());
+                        email.setText(user.getUser_email());
+                        phonenumber.setText(user.getUser_phone_number());
+                        otherpn.setText(user.getOtherPhoneNumber());
+                        farmlocation.setText(user.getFarmLocation());
+                        sor.setText(user.getStateOfOrigin());
+                        soor.setText(user.stateOfResidence);
+                        yof.setText(user.getYearsOfFarming());
+                        cor.setText(user.getCityOfResidenc());
+                        ha.setText(user.getHomeAddress());
+                        nin.setText(user.getUser_nin());
+
+                        String imguri = user.getProfilePic();
+                        Picasso.get().load(imguri).placeholder(R.drawable.profile_icon).into(imageView);
+
+                    }
+                }
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         // query 1
-        Query query = reference.child(getString(R.string.dbnode))
+       /* Query query = reference.child(getString(R.string.dbnode))
                 .orderByKey()
                 .equalTo(FirebaseAuth.getInstance().getCurrentUser().getUid());
         query.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -81,6 +118,6 @@ public class Profile extends AppCompatActivity {
 
             }
         });
-      //  email.setText(FirebaseAuth.getInstance().getCurrentUser().getEmail());
+      //  email.setText(FirebaseAuth.getInstance().getCurrentUser().getEmail());*/
     }
 }

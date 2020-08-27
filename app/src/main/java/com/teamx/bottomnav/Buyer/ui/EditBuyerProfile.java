@@ -18,15 +18,13 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.teamx.bottomnav.EditProfile;
-import com.teamx.bottomnav.FProfile;
 import com.teamx.bottomnav.R;
+import com.teamx.bottomnav.User;
 
 import java.io.IOException;
 
@@ -141,7 +139,7 @@ public class EditBuyerProfile extends AppCompatActivity {
                             progressDialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Image Uploaded Successfully ", Toast.LENGTH_LONG).show();
                             @SuppressWarnings("VisibleForTests")
-                            FProfile imageUploadInfo = new FProfile(taskSnapshot.getUploadSessionUri().toString());
+                            User imageUploadInfo = new User(taskSnapshot.getUploadSessionUri().toString());
                             String ImageUploadId = databaseReference.push().getKey();
                             databaseReference.child(ImageUploadId).setValue(imageUploadInfo);
                         }
@@ -156,7 +154,7 @@ public class EditBuyerProfile extends AppCompatActivity {
 
     public void uploadData(){
         // change name just incase the user only wants to change a single item
-        FProfile fProfile = new FProfile();
+        User fProfile = new User();
         fProfile.setOtherPhoneNumber(otherPhoneNo.getText().toString().trim());
         fProfile.setHomeAddress(HA.getText().toString().trim());
         fProfile.setFarmLocation(ShopLoc.getText().toString().trim());

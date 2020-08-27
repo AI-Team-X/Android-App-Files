@@ -20,6 +20,7 @@
             android:layout_marginTop="41dp"
             android:text="Name Of Customer"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorPrimary"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,7 +44,7 @@
             android:layout_marginTop="17dp"
             android:text="Email Of Customer"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#000000"
+            android:textColor="@color/colorPrimary"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
@@ -68,7 +69,7 @@
             android:layout_marginTop="8dp"
             android:text="Crop To Sell"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#000000"
+            android:textColor="@color/colorPrimary"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
 
@@ -93,7 +94,7 @@
             android:layout_marginTop="10dp"
             android:text="Price"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#000000"
+            android:textColor="@color/colorPrimary"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
 
@@ -117,7 +118,7 @@
             android:layout_marginTop="10dp"
             android:text="Number Of Baskets To Sell"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#000000"
+            android:textColor="@color/colorPrimary"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
 
